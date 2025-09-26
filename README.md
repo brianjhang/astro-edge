@@ -3,15 +3,11 @@
 **Give your Astro site the winning edge.**
 _Built at Brian Jhang's Edge_
 
-[![NPM Version](https://img.shields.io/npm/v/astro-edge.svg?style=flat&color=blue)](https://www.npmjs.com/package/astro-edge)
 [![GitHub Stars](https://img.shields.io/github/stars/brianjhang/astro-edge.svg?style=social)](https://github.com/brianjhang/astro-edge)
 [![License](https://img.shields.io/github/license/brianjhang/astro-edge)](LICENSE)
+[![Version](https://img.shields.io/badge/version-0.9.0--beta-blue.svg?style=flat)](https://github.com/brianjhang/astro-edge/releases)
 
 ---
-
-<p align="center">
-  <img src="[PLACEHOLDER_FOR_DEMO_GIF]" alt="AstroEdge Demo">
-</p>
 
 Tired of seeing your competitors lead with faster sites? Stop settling for mediocre Lighthouse scores and slow builds. **AstroEdge** is the all-in-one toolkit designed to give your Astro project the ultimate performance advantage.
 
@@ -43,38 +39,58 @@ At its core, AstroEdge is powered by the `astro-optimizer` engine to automate th
 **1. Installation**
 
 ```bash
-# The brand is AstroEdge, so we install astro-edge
-npm install astro-edge --save-dev
+# Clone the repository (NPM package coming soon)
+git clone https://github.com/brianjhang/astro-edge.git
+cd astro-edge
+npm install
+
+# Or copy tools to your existing Astro project
+cp -r tools/ /path/to/your/astro/project/
 ```
 
-**2. Configuration**
+**2. Add Scripts**
+
+Add these scripts to your `package.json`:
+
+```json
+{
+  "scripts": {
+    "optimize:images": "node tools/optimize-og-images.js",
+    "optimize:complete": "npm run optimize:images && echo '✅ Optimization complete'",
+    "performance:check": "npx lighthouse https://your-domain.com --preset=desktop --only-categories=performance",
+    "performance:monitor": "node tools/performance-monitor.js",
+    "system:health": "node tools/system-health-check.js"
+  }
+}
+```
+
+**3. Configure Astro**
+
+For maximum performance, set your `astro.config.mjs` to static output:
 
 ```javascript
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import astroEdge from 'astro-edge'; // 👈 Import the main package
 
 export default defineConfig({
-  // Powered by the core 'astro-optimizer' engine
-  integrations: [astroEdge()],
+  output: 'static', // 🚀 Key performance optimization
 });
 ```
 
-**3. Run It!**
-
-Add the script to your package.json:
-
-```json
-// package.json
-"scripts": {
-  "optimize": "astro-edge optimize" // 👈 Add this line
-}
-```
-
-Then run the command:
+**4. Run Optimization**
 
 ```bash
-npm run optimize
+# Quick start - optimize images
+npm run optimize:images
+
+# Full optimization pipeline
+npm run optimize:complete
+
+# Monitor performance
+npm run performance:monitor
+
+# System health check
+npm run system:health
 ```
 
 ---
