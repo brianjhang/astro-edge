@@ -1,0 +1,26 @@
+{
+  "name": "@astro-edge/optimizer",
+  "version": "0.9.0-beta",
+  "description": "Core optimization engine for AstroEdge - automated performance optimization for Astro projects",
+  "keywords": [
+    "astro",
+    "optimization",
+    "performance",
+    "webp",
+    "image-compression",
+    "static-generation"
+  ],
+  "author": "Brian Jhang <brianjhang.ai@gmail.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "sharp": "^0.33.0"
+  },
+  "peerDependencies": {
+    "astro": ">=4.0.0"
+  }
+}

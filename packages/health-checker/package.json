@@ -1,0 +1,24 @@
+{
+  "name": "@astro-edge/health-checker",
+  "version": "0.9.0-beta",
+  "description": "System health diagnostics and maintenance for AstroEdge",
+  "keywords": [
+    "astro",
+    "health-check",
+    "maintenance",
+    "security",
+    "diagnostics",
+    "automation"
+  ],
+  "author": "Brian Jhang <brianjhang.ai@gmail.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "astro": ">=4.0.0"
+  }
+}

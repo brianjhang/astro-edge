@@ -1,0 +1,73 @@
+{
+  "name": "astro-edge",
+  "version": "0.9.0-beta",
+  "description": "The Complete Performance & Health Toolkit for Astro - Give your Astro site the winning edge.",
+  "keywords": [
+    "astro",
+    "performance",
+    "optimization",
+    "lighthouse",
+    "webp",
+    "image-compression",
+    "monitoring",
+    "health-check",
+    "devtools"
+  ],
+  "author": "Brian Jhang <brianjhang.ai@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/brianjhang/astro-edge#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brianjhang/astro-edge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brianjhang/astro-edge/issues"
+  },
+  "main": "packages/astro-optimizer/index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "dev": "echo 'AstroEdge development mode'",
+    "build": "echo 'Building AstroEdge packages'",
+    "test": "echo 'Running AstroEdge tests'",
+
+    "optimize:images": "node tools/optimize-og-images.js",
+    "optimize:update-refs": "node tools/update-og-references.js",
+    "optimize:complete": "npm run optimize:images && npm run optimize:update-refs && echo '✅ Complete optimization finished'",
+
+    "performance:check": "npx lighthouse https://your-domain.com --preset=desktop --only-categories=performance --chrome-flags='--headless --no-sandbox'",
+    "performance:monitor": "node tools/performance-monitor.js",
+    "performance:trends": "node tools/performance-trends.js",
+
+    "system:health": "node tools/system-health-check.js",
+    "project:maintenance": "node tools/project-maintenance.js",
+
+    "og:generate": "node tools/simple-png-generator.js",
+    "og:generate-all": "node tools/simple-png-generator.js --all",
+    "og:sync": "node tools/sync-og-paths.js",
+    "og:sync-full": "node tools/sync-og-paths.js --full",
+    "og:sync-preview": "node tools/sync-og-paths.js --dry-run",
+
+    "maintenance:audit": "npm audit && npm outdated",
+    "maintenance:update": "npm update"
+  },
+  "dependencies": {
+    "sharp": "^0.33.0",
+    "gray-matter": "^4.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0"
+  },
+  "peerDependencies": {
+    "astro": ">=4.0.0"
+  },
+  "files": [
+    "packages/",
+    "tools/",
+    "docs/",
+    "README.md",
+    "LICENSE"
+  ]
+}
