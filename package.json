@@ -1,6 +1,6 @@
 {
   "name": "astro-edge",
-  "version": "0.9.0-beta",
+  "version": "0.9.0",
   "description": "The Complete Performance & Health Toolkit for Astro - Give your Astro site the winning edge.",
   "keywords": [
     "astro",
@@ -24,6 +24,9 @@
     "url": "https://github.com/brianjhang/astro-edge/issues"
   },
   "main": "packages/astro-optimizer/index.js",
+  "bin": {
+    "astro-edge": "bin/astro-edge.js"
+  },
   "type": "module",
   "engines": {
     "node": ">=18.0.0"
@@ -67,6 +70,7 @@
     "packages/",
     "tools/",
     "docs/",
+    "bin/",
     "README.md",
     "LICENSE"
   ]
