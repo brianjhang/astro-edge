@@ -3,9 +3,10 @@
 **Give your Astro site the winning edge.**
 _Built at Brian Jhang's Edge_
 
+[![NPM Version](https://img.shields.io/npm/v/astro-edge.svg?style=flat&color=blue)](https://www.npmjs.com/package/astro-edge)
 [![GitHub Stars](https://img.shields.io/github/stars/brianjhang/astro-edge.svg?style=social)](https://github.com/brianjhang/astro-edge)
 [![License](https://img.shields.io/github/license/brianjhang/astro-edge)](LICENSE)
-[![Version](https://img.shields.io/badge/version-0.9.0--beta-blue.svg?style=flat)](https://github.com/brianjhang/astro-edge/releases)
+[![Downloads](https://img.shields.io/npm/dm/astro-edge.svg?style=flat&color=green)](https://www.npmjs.com/package/astro-edge)
 
 ---
 
@@ -39,58 +40,39 @@ At its core, AstroEdge is powered by the `astro-optimizer` engine to automate th
 **1. Installation**
 
 ```bash
-# Clone the repository (NPM package coming soon)
-git clone https://github.com/brianjhang/astro-edge.git
-cd astro-edge
-npm install
+# Install globally for CLI usage
+npm install -g astro-edge
 
-# Or copy tools to your existing Astro project
-cp -r tools/ /path/to/your/astro/project/
+# Or install in your project
+npm install astro-edge --save-dev
+
+# Or use directly with npx
+npx astro-edge optimize
 ```
 
-**2. Add Scripts**
-
-Add these scripts to your `package.json`:
-
-```json
-{
-  "scripts": {
-    "optimize:images": "node tools/optimize-og-images.js",
-    "optimize:complete": "npm run optimize:images && echo '✅ Optimization complete'",
-    "performance:check": "npx lighthouse https://your-domain.com --preset=desktop --only-categories=performance",
-    "performance:monitor": "node tools/performance-monitor.js",
-    "system:health": "node tools/system-health-check.js"
-  }
-}
-```
-
-**3. Configure Astro**
+**2. Configure Astro**
 
 For maximum performance, set your `astro.config.mjs` to static output:
 
 ```javascript
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
+import astroEdge from 'astro-edge'; // Coming soon!
 
 export default defineConfig({
   output: 'static', // 🚀 Key performance optimization
+  // integrations: [astroEdge()], // Coming in v1.0
 });
 ```
 
-**4. Run Optimization**
+**3. Run Optimization**
 
 ```bash
-# Quick start - optimize images
-npm run optimize:images
+# Quick CLI usage
+npx astro-edge optimize
 
-# Full optimization pipeline
-npm run optimize:complete
-
-# Monitor performance
-npm run performance:monitor
-
-# System health check
-npm run system:health
+# Or if installed globally
+astro-edge optimize
 ```
 
 ---
