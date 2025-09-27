@@ -286,6 +286,19 @@ MIT © 2025 Brian Jhang
 
 ---
 
+## 🌐 多語言支援
+
+- **[English](README.md)** - 英文版本
+- **[中文](README-zh.md)** - 你正在閱讀的版本
+
+---
+
+## 📜 許可證
+
+MIT © 2025 Brian Jhang
+
+---
+
 **🚀 準備好主導你的競爭對手了嗎？用 AstroEdge 獲得優勢。**
 
 **立即開始：`npx astro-edge optimize`**
