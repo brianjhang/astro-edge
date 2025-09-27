@@ -3,6 +3,8 @@
 **讓你的 Astro 網站擁有勝利的優勢**
 _誕生於 Brian Jhang's Edge_
 
+**語言**: [English](README.md) | [中文](README-zh.md)
+
 [![NPM 版本](https://img.shields.io/npm/v/astro-edge.svg?style=flat&color=blue)](https://www.npmjs.com/package/astro-edge)
 [![GitHub Stars](https://img.shields.io/github/stars/brianjhang/astro-edge.svg?style=social)](https://github.com/brianjhang/astro-edge)
 [![許可證](https://img.shields.io/github/license/brianjhang/astro-edge)](LICENSE)
@@ -283,13 +285,6 @@ MIT © 2025 Brian Jhang
 - 深度客製化選項
 - 擴展性架構設計
 - 最新技術整合
-
----
-
-## 🌐 多語言支援
-
-- **[English](README.md)** - 英文版本
-- **[中文](README-zh.md)** - 你正在閱讀的版本
 
 ---
 

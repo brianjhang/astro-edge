@@ -3,6 +3,8 @@
 **Give your Astro site the winning edge.**
 _Built at Brian Jhang's Edge_
 
+**Languages**: [English](README.md) | [中文](README-zh.md)
+
 [![NPM Version](https://img.shields.io/npm/v/astro-edge.svg?style=flat&color=blue)](https://www.npmjs.com/package/astro-edge)
 [![GitHub Stars](https://img.shields.io/github/stars/brianjhang/astro-edge.svg?style=social)](https://github.com/brianjhang/astro-edge)
 [![License](https://img.shields.io/github/license/brianjhang/astro-edge)](LICENSE)
@@ -236,12 +238,6 @@ This collaborative model is the essence of the "one-person AI super-individual c
 
 ---
 
-## 🌐 Multi-Language Support
-
-- **[English](README.md)** - You're reading this version
-- **[中文](README-zh.md)** - Chinese version with localized features
-
----
 
 ## 📜 License
 
