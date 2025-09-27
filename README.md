@@ -50,18 +50,30 @@ npm install astro-edge --save-dev
 npx astro-edge optimize
 ```
 
-**2. Configure Astro**
+**2. Configure Astro Integration (Recommended)**
 
-For maximum performance, set your `astro.config.mjs` to static output:
+For maximum performance, integrate AstroEdge directly in your `astro.config.mjs`:
 
 ```javascript
 // astro.config.mjs
 import { defineConfig } from 'astro/config';
-import astroEdge from 'astro-edge'; // Coming soon!
+import astroEdge from 'astro-edge';
 
 export default defineConfig({
+  integrations: [
+    astroEdge({
+      optimization: {
+        images: { format: 'webp', quality: 80 },
+        static: true,
+        compression: true
+      },
+      monitoring: {
+        lighthouse: true,
+        thresholds: { performance: 95 }
+      }
+    })
+  ],
   output: 'static', // 🚀 Key performance optimization
-  // integrations: [astroEdge()], // Coming in v1.0
 });
 ```
 
@@ -73,6 +85,9 @@ npx astro-edge optimize
 
 # Or if installed globally
 astro-edge optimize
+
+# Auto-fix common issues
+npx astro-edge optimize --auto-fix
 ```
 
 ---
@@ -98,6 +113,13 @@ npm run system:health        # Comprehensive system diagnostics
 npm run project:maintenance  # Automated maintenance tasks
 ```
 
+**OG Image Generation**
+```bash
+npm run og:generate         # Generate social media images
+npm run og:sync            # Sync OG image paths
+npm run og:clean           # Clean up unused OG images
+```
+
 ---
 
 ## 📊 Core Features
@@ -120,18 +142,30 @@ npm run project:maintenance  # Automated maintenance tasks
 - **Resource Management**: Automatic cleanup and backup
 - **Health Scoring**: Overall project health assessment
 
+### 🧠 Smart Error Handling
+- **Environment Diagnostics**: Automatic detection of common configuration issues
+- **Fix Suggestions**: Clear, actionable resolution steps
+- **Auto-Fix**: One-click solutions for common dependency problems
+- **Friendly Guidance**: Clear error messages and helpful instructions
+
 ---
 
 ## 🪐 Roadmap: The AstroEdge Ecosystem
 
 AstroEdge is more than just an optimizer. It's the beginning of a complete ecosystem for professional Astro developers. Our vision includes:
 
-**v1.0.0** (Stable Release): After this public beta (v0.9.x), we will launch the first stable version.
+**v1.0.0** (Stable Release): Now featuring true Astro integration and smart error handling!
 
+Current features in v0.9.x:
+- ✅ **True Astro Integration**: Direct integration in astro.config.mjs
+- ✅ **Smart Error Handling**: Auto-diagnosis and auto-fix capabilities
+- ✅ **Astro 5.x Compatibility**: Full support for latest Astro versions
+
+Coming in v1.0.x:
 - **Advanced Image Pipeline**: Deeper control over image formats, quality, and CDN integration
-- **Astro Analyzer** (`astro-analyzer`): A dedicated package for in-depth code analysis and best-practice enforcement
-- **Cache & CDN Helper** (`astro-cache`): Intelligent caching strategies for dynamic and static assets
-- **Security Hardening** (`astro-secure`): Automated security checks and header configurations
+- **Interactive Setup Wizard**: Guided configuration for optimal performance
+- **Visual Performance Reports**: Rich charts and performance analytics
+- **VS Code Extension**: Integrated development experience
 
 👉 We are building the ultimate toolkit to keep your Astro projects on the cutting edge.
 
@@ -199,6 +233,13 @@ For the initial `v0.9.x` release, the core AI collaborators included:
     * **AI Brainstorming Partner (Initial Concepts):** OpenAI's **ChatGPT**
 
 This collaborative model is the essence of the "one-person AI super-individual company".
+
+---
+
+## 🌐 Multi-Language Support
+
+- **[English](README.md)** - You're reading this version
+- **[中文](README-zh.md)** - Chinese version with localized features
 
 ---
 
