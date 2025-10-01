@@ -122,6 +122,11 @@ npm run og:sync            # Sync OG image paths
 npm run og:clean           # Clean up unused OG images
 ```
 
+**Multi-language Support**
+```bash
+npm run i18n:map           # Generate translation mapping for multi-language sites
+```
+
 ---
 
 ## 📊 Core Features

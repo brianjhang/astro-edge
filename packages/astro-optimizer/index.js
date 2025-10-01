@@ -93,13 +93,16 @@ function generateBuildReport(buildDir, pages, config) {
   console.log('\n📊 AstroEdge Build Report:');
   console.log('='.repeat(40));
 
+  // Convert URL to string if needed (Astro 5.x compatibility)
+  const buildPath = buildDir instanceof URL ? buildDir.pathname : buildDir;
+
   // Basic build info
-  console.log(`📁 Build directory: ${path.relative(process.cwd(), buildDir)}`);
+  console.log(`📁 Build directory: ${path.relative(process.cwd(), buildPath)}`);
   console.log(`📄 Pages generated: ${pages?.length || 'Unknown'}`);
 
   // Check build size
   try {
-    const stats = fs.statSync(buildDir);
+    const stats = fs.statSync(buildPath);
     console.log(`📦 Build completed: ${new Date(stats.mtime).toLocaleString()}`);
   } catch (error) {
     // Build directory might not exist yet

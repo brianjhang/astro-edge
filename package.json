@@ -1,6 +1,6 @@
 {
   "name": "astro-edge",
-  "version": "0.9.1",
+  "version": "0.9.3",
   "description": "The Complete Performance & Health Toolkit for Astro - Give your Astro site the winning edge.",
   "keywords": [
     "astro",
@@ -52,6 +52,8 @@
     "og:sync": "node tools/sync-og-paths.js",
     "og:sync-full": "node tools/sync-og-paths.js --full",
     "og:sync-preview": "node tools/sync-og-paths.js --dry-run",
+
+    "i18n:map": "node tools/generate-translation-map.js",
 
     "maintenance:audit": "npm audit && npm outdated",
     "maintenance:update": "npm update"
